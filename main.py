@@ -1,6 +1,13 @@
-from stats import get_num_words, get_num_characters
+from stats import get_num_words, report_sort
 
-get_num_words()
+chars = report_sort()
+words = get_num_words()
 
-char_counts = get_num_characters()
-print(char_counts)
+print("============ BOOKBOT ============")
+print("Analyzing book found at books/frankenstein.txt...")
+print("----------- Word Count ----------")
+print(f"Found {words} total words")
+print("--------- Character Count -------")
+for char_data in chars:
+    print(f"{char_data['char']}: {char_data['count']}")
+print("============= END ===============")
